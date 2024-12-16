@@ -6,7 +6,7 @@
 /*   By: pbencze <pbencze@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 14:45:10 by vados-sa          #+#    #+#             */
-/*   Updated: 2024/12/12 15:38:04 by pbencze          ###   ########.fr       */
+/*   Updated: 2024/12/16 16:14:43 by pbencze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ t_color	gradient(t_ray r, t_coord camera_up, t_data *data)
 /**
  * @brief: calculates and puts the pixel color for
  * the window´s pixel (x,y). If there is no intersection
- * with an object, but there is a camera, it simply renders 
+ * with an object, but there is a camera, it simply renders
  * the gradient background.
  */
 void	put_color(uint32_t x, uint32_t y, t_data *data, t_ray ray)
@@ -62,7 +62,7 @@ void	put_color(uint32_t x, uint32_t y, t_data *data, t_ray ray)
 
 /**
  * @brief: renders looping through each pixel of the window
- * @var ray: the ray originating at the camera´s position and 
+ * @var ray: the ray originating at the camera´s position and
  * going through the windows pixel at width x and height y,
  * translated into viewport dimensions
  */
@@ -71,8 +71,6 @@ void	render(t_data *data)
 	uint32_t	x;
 	uint32_t	y;
 	t_ray		ray;
-	uint32_t	color;
-	t_color		rgba;
 
 	y = -1;
 	while (++y < data->image_height)
